@@ -57,8 +57,7 @@ public class MainActivity extends AppCompatActivity {
         TextView boxText = (TextView) findViewById(R.id.boxText);
         boxText.setText ( "Sorteando...");
 
-        new android.os.Handler().postDelayed(
-
+        new android.os.Handler().postDelayed
                 new Runnable() {
                     @Override
                     public void run() {
@@ -68,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         , 3000);
-
     }
 
     public void sortear(View view) {
