@@ -8,10 +8,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-
-o texto
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +38,6 @@ o texto
         return true;
     }
 
-    @muda
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -52,14 +51,30 @@ o texto
         }
 
         return super.onOptionsItemSelected(item);
-    } -nome do box -boxText
-
-    public void setText(View view) {
-        TextView boxText = (TextView) findById(R.id.boxText);
-        boxText.text = "Novo Text";
     }
 
-    public int getNumber() {
-        return Ramdon().nextTo(n:0, 10);
+    public void setBoxText(View view) {
+        TextView boxText = (TextView) findViewById(R.id.boxText);
+        boxText.setText ( "Sorteando...");
+
+        new android.os.Handler().postDelayed(
+
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        public void run(){
+                            MainActivity.this.sortear();
+                        }
+                    }
+                }
+        , 3000);
+
+    }
+
+    public void sortear(View view) {
+        int n = new Random().nextInt();
+
+        TextView boxSort = (TextView) findViewById(R.id.boxSort);
+        boxSort.setText( "O número sorteado é: "+ n );
     }
 }
