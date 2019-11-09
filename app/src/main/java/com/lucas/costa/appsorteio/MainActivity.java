@@ -1,6 +1,7 @@
 package com.lucas.costa.appsorteio;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
