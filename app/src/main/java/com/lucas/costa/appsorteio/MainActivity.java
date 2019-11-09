@@ -30,6 +30,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public int numberSorted ( ) {
-        return new Random ( ).nextInt ( 10 );
+        return new Random ( ).nextInt ( 11 );
     }
 }
